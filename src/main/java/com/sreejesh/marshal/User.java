@@ -14,24 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package sample.camel;
+package com.sreejesh.marshal;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//CHECKSTYLE:OFF
-/**
- * A sample Spring Boot application that starts the Camel routes.
- */
-@SpringBootApplication
-public class MyCamelApplication {
 
-    /**
-     * A main method to start this application.
-     */
-    public static void main(String[] args) {
-        SpringApplication.run(MyCamelApplication.class, args);
-    }
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
+
+    private String name;
+    private int age;
+    private List<Address> addresses;
 }
-//CHECKSTYLE:ON
