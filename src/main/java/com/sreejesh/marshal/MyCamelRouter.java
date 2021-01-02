@@ -58,6 +58,7 @@ public class MyCamelRouter extends RouteBuilder {
         .convertBodyTo(String.class)
         .log("STEP 210: ${body.class.name} - body:${body}")
         .unmarshal().json(JsonLibrary.Jackson,User.class,true)
+//        .unmarshal().json(JsonLibrary.Jackson,Class.forName("com.sreejesh.marshal.User"),true)
         .log("STEP 220: ${body.class.name}")
         .log("STEP 230: ${body}")
         ;
